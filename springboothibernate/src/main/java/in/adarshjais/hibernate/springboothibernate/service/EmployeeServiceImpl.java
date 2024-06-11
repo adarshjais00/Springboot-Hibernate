@@ -44,4 +44,11 @@ public class EmployeeServiceImpl implements EmployeeService{
         return employeeRepository.getEmployeeByName(name);
     }
 
+    @Override
+    public Employee updateEmployee(Integer id, Employee employee) {
+        Employee emp = employeeRepository.findById(id).get();
+        emp.setEmail(employee.getEmail());
+        return employeeRepository.save(emp);
+    }
+
 }

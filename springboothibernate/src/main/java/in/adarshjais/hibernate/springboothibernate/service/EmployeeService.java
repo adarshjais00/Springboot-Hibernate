@@ -11,4 +11,6 @@ public interface EmployeeService {
     public Employee getEmployeeById(Integer id);
     public List<Employee>  getEmployeeByName(String name);
 
+    public Employee updateEmployee(Integer id, Employee employee);
+
 }
